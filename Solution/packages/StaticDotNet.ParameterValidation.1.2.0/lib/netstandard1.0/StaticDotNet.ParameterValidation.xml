@@ -1,0 +1,1091 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StaticDotNet.ParameterValidation</name>
+    </assembly>
+    <members>
+        <member name="T:StaticDotNet.ParameterValidation.IComparableExtensions">
+            <summary>
+            Adds parameter validation for <see cref="T:System.IComparable`1"/>.
+            </summary>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsGreaterThan``1(StaticDotNet.ParameterValidation.ParameterValidator{``0},``0)">
+            <summary>
+            Validates a parameter is greater than <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be greater than.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not greater than <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsGreaterThan``1(StaticDotNet.ParameterValidation.ParameterValidator{``0},``0,System.String)">
+            <summary>
+            Validates a parameter is greater than <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be greater than.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not greater than <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsGreaterThan``1(StaticDotNet.ParameterValidation.ParameterValidator{System.Nullable{``0}},System.Nullable{``0})">
+            <summary>
+            Validates a parameter is greater than <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be greater than.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not greater than <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsGreaterThan``1(StaticDotNet.ParameterValidation.ParameterValidator{System.Nullable{``0}},System.Nullable{``0},System.String)">
+            <summary>
+            Validates a parameter is greater than <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be greater than.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not greater than <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsGreaterThanOrEqualTo``1(StaticDotNet.ParameterValidation.ParameterValidator{``0},``0)">
+            <summary>
+            Validates a parameter is greater than or equal to <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be greater than or equal to.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not greater than or equal to <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsGreaterThanOrEqualTo``1(StaticDotNet.ParameterValidation.ParameterValidator{``0},``0,System.String)">
+            <summary>
+            Validates a parameter is greater than or equal to <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be greater than or equal to.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not greater than or equal to <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsGreaterThanOrEqualTo``1(StaticDotNet.ParameterValidation.ParameterValidator{System.Nullable{``0}},System.Nullable{``0})">
+            <summary>
+            Validates a parameter is greater than or equal to <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be greater than or equal to.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not greater than or equal to <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsGreaterThanOrEqualTo``1(StaticDotNet.ParameterValidation.ParameterValidator{System.Nullable{``0}},System.Nullable{``0},System.String)">
+            <summary>
+            Validates a parameter is greater than or equal to <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be greater than or equal to.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not greater than or equal to <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsLessThan``1(StaticDotNet.ParameterValidation.ParameterValidator{``0},``0)">
+            <summary>
+            Validates a parameter is less than <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be less than.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not less than <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsLessThan``1(StaticDotNet.ParameterValidation.ParameterValidator{``0},``0,System.String)">
+            <summary>
+            Validates a parameter is less than <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be less than.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not less than <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsLessThan``1(StaticDotNet.ParameterValidation.ParameterValidator{System.Nullable{``0}},System.Nullable{``0})">
+            <summary>
+            Validates a parameter is less than <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be less than.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not less than <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsLessThan``1(StaticDotNet.ParameterValidation.ParameterValidator{System.Nullable{``0}},System.Nullable{``0},System.String)">
+            <summary>
+            Validates a parameter is less than <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be less than.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not less than <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsLessThanOrEqualTo``1(StaticDotNet.ParameterValidation.ParameterValidator{``0},``0)">
+            <summary>
+            Validates a parameter is less than or equal to <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be less than or equal to.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not less than or equal to <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsLessThanOrEqualTo``1(StaticDotNet.ParameterValidation.ParameterValidator{``0},``0,System.String)">
+            <summary>
+            Validates a parameter is less than or equal to <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be less than or equal to.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not less than or equal to <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsLessThanOrEqualTo``1(StaticDotNet.ParameterValidation.ParameterValidator{System.Nullable{``0}},System.Nullable{``0})">
+            <summary>
+            Validates a parameter is less than or equal to <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be less than or equal to.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not less or equal to than <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsLessThanOrEqualTo``1(StaticDotNet.ParameterValidation.ParameterValidator{System.Nullable{``0}},System.Nullable{``0},System.String)">
+            <summary>
+            Validates a parameter is less than or equal to <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must be less than or equal to.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not less than or equal to <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsBetween``1(StaticDotNet.ParameterValidation.ParameterValidator{``0},``0,``0)">
+            <summary>
+            Validates a parameter is between <paramref name="minValue" /> and <paramref name="maxValue" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="minValue">The value the parameter must be greater than or equal to.</param>
+            <param name="maxValue">The value the parameter must be less than or equal to.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not between <paramref name="minValue" /> and <paramref name="maxValue" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsBetween``1(StaticDotNet.ParameterValidation.ParameterValidator{``0},``0,``0,System.String)">
+            <summary>
+            Validates a parameter is between <paramref name="minValue" /> and <paramref name="maxValue" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="minValue">The value the parameter must be greater than or equal to.</param>
+            <param name="maxValue">The value the parameter must be less than or equal to.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not between <paramref name="minValue" /> and <paramref name="maxValue" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsBetween``1(StaticDotNet.ParameterValidation.ParameterValidator{System.Nullable{``0}},``0,``0)">
+            <summary>
+            Validates a parameter is between <paramref name="minValue" /> and <paramref name="maxValue" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="minValue">The value the parameter must be greater than or equal to.</param>
+            <param name="maxValue">The value the parameter must be less than or equal to.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not between <paramref name="minValue" /> and <paramref name="maxValue" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IComparableExtensions.IsBetween``1(StaticDotNet.ParameterValidation.ParameterValidator{System.Nullable{``0}},``0,``0,System.String)">
+            <summary>
+            Validates a parameter is between <paramref name="minValue" /> and <paramref name="maxValue" />. Otherwise, an <see cref="T:System.ArgumentOutOfRangeException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="minValue">The value the parameter must be greater than or equal to.</param>
+            <param name="maxValue">The value the parameter must be less than or equal to.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the parameter is not between <paramref name="minValue" /> and <paramref name="maxValue" />.</exception>
+        </member>
+        <member name="T:StaticDotNet.ParameterValidation.IEnumerableExtensions">
+            <summary>
+            Adds parameter validation for <see cref="T:System.Collections.IEnumerable" /> and <see cref="T:System.Collections.Generic.IEnumerable`1" />.
+            </summary>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IEnumerableExtensions.IsNotEmpty``1(StaticDotNet.ParameterValidation.ParameterValidator{``0})">
+            <summary>
+            Validates that the parameter is not empty. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is empty.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IEnumerableExtensions.IsNotEmpty``1(StaticDotNet.ParameterValidation.ParameterValidator{``0},System.String)">
+            <summary>
+            Validates that the parameter is not empty. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is empty.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IEnumerableExtensions.IsEmpty``1(StaticDotNet.ParameterValidation.ParameterValidator{``0})">
+            <summary>
+            Validates that the parameter is empty. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is not empty.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IEnumerableExtensions.IsEmpty``1(StaticDotNet.ParameterValidation.ParameterValidator{``0},System.String)">
+            <summary>
+            Validates that the parameter is empty. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is not empty.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IEnumerableExtensions.IsNotNullOrEmpty``1(StaticDotNet.ParameterValidation.ParameterValidator{``0})">
+            <summary>
+            Validates that the parameter is not null or empty. Otherwise, an <see cref="T:System.ArgumentNullException" /> or <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the parameter is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is empty.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IEnumerableExtensions.IsNotNullOrEmpty``1(StaticDotNet.ParameterValidation.ParameterValidator{``0},System.String)">
+            <summary>
+            Validates that the parameter is not null or empty. Otherwise, an <see cref="T:System.ArgumentNullException" /> or <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the parameter is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is empty.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IEnumerableExtensions.Contains``2(StaticDotNet.ParameterValidation.ParameterValidator{``0},``1)">
+            <summary>
+            Validates that the parameter contains <paramref name="value" />. Otherwise an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <typeparam name="TValue">The type the parameter value contains.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must contain.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Occurs when the parameter does not contain <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.IEnumerableExtensions.Contains``2(StaticDotNet.ParameterValidation.ParameterValidator{``0},``1,System.String)">
+            <summary>
+            Validates that the parameter contains <paramref name="value" />. Otherwise an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TParameter">The parameter type.</typeparam>
+            <typeparam name="TValue">The type the parameter value contains.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must contain.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Occurs when the parameter does not contain <paramref name="value" />.</exception>
+        </member>
+        <member name="T:StaticDotNet.ParameterValidation.Parameter">
+            <summary>
+            Class used to validate parameters.
+            </summary>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.Parameter.Validate``1(``0)">
+            <summary>
+            Validates a parameter.
+            </summary>
+            <typeparam name="TParameter">The type of parameter.</typeparam>
+            <param name="value">The value of the parameter.</param>
+            <returns>An instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.Parameter.Validate``1(``0,System.String)">
+            <summary>
+            Validates a parameter.
+            </summary>
+            <typeparam name="TParameter">The type of the parameter.</typeparam>
+            <param name="value">The value of the parameter.</param>
+            <param name="name">The name of the parameter.</param>
+            <returns>An instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+        </member>
+        <member name="T:StaticDotNet.ParameterValidation.ParameterValidator`1">
+            <summary>
+            Used to validate parameters.
+            </summary>
+            <typeparam name="TParameter">The type of the parameter.</typeparam>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.#ctor(System.String,`0)">
+            <summary>
+            Instantiates a new instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.
+            </summary>
+            <param name="name">The name of the parameter to validate.</param>
+            <param name="value">The value of the parameter to validate.</param>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.ParameterValidator`1.Name">
+            <summary>
+            Returns the name of the parameter.
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.ParameterValidator`1.Value">
+            <summary>
+            Returns the value of the parameter.
+            </summary>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.IsNotNull">
+            <summary>
+            Validates that the parameter is not null. Otherwise, an <see cref="T:System.ArgumentNullException" /> is thrown.
+            </summary>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when parameter is null.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.IsNotNull(System.String)">
+            <summary>
+            Validates that the parameter is not null. Otherwise, an <see cref="T:System.ArgumentNullException" /> is thrown
+            with the <paramref name="exceptionMessage" /> as the exception message.
+            </summary>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when parameter is null.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.IsNull">
+            <summary>
+            Validates that the parameter is null. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when parameter is not null.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.IsNull(System.String)">
+            <summary>
+            Validates that the parameter is null. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown
+            with the <paramref name="exceptionMessage" /> as the exception message.
+            </summary>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when parameter is not null.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.IsEqualTo(`0)">
+            <summary>
+            Validates that the parameter is equal to <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="value">The value the parameter must be equal to.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when parameter is not equal to <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.IsEqualTo(`0,System.String)">
+            <summary>
+            Validates that the parameter is equal to <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="value">The value the parameter must be equal to.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when parameter is not equal to <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.IsNotEqualTo(`0)">
+            <summary>
+            Validates that the parameter is not equal to <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="value">The value the parameter must not be equal to.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when parameter is equal to <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.IsNotEqualTo(`0,System.String)">
+            <summary>
+            Validates that the parameter is not equal to <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="value">The value the parameter must not be equal to.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when parameter is equal to <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.IsType``1">
+            <summary>
+            Validates that the parameter is type <typeparamref name="TType" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TType">The type the parameter should be.</typeparam>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when parameter is not type <typeparamref name="TType" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.IsType``1(System.String)">
+            <summary>
+            Validates that the parameter is type <typeparamref name="TType" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TType">The type the parameter should be.</typeparam>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when parameter is not type <typeparamref name="TType" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.IsType``1(``0@)">
+            <summary>
+            Validates that the parameter is type <typeparamref name="TType" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TType">The type the parameter should be.</typeparam>
+            <param name="instance">The instance cast as <typeparamref name="TType" />. If the parameter value is null, the instance is null.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when parameter is not type <typeparamref name="TType" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.IsType``1(System.String,``0@)">
+            <summary>
+            Validates that the parameter is type <typeparamref name="TType" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TType">The type the parameter should be.</typeparam>
+            <param name="exceptionMessage">The exception message.</param>
+            <param name="instance">The instance cast as <typeparamref name="TType" />. If the parameter value is null, the instance is null.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when parameter is not type <typeparamref name="TType" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.IsType(System.Type)">
+            <summary>
+            Validates that the parameter is type <paramref name="type" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="type">The type the parameter should be.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when parameter is not type <paramref name="type" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.IsType(System.Type,System.String)">
+            <summary>
+            Validates that the parameter is type <paramref name="type" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="type">The type the parameter should be.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when parameter is not type <paramref name="type" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.When(System.Func{`0,System.Boolean},System.Action{StaticDotNet.ParameterValidation.ParameterValidator{`0}})">
+            <summary>
+            Adds additional validation based on the <paramref name="conditionExpression" /> returning true.
+            </summary>
+            <param name="conditionExpression">The expression to evaluate.</param>
+            <param name="trueExpression">The validation to run if the <paramref name="conditionExpression" /> returns true.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.When(System.Func{`0,System.Boolean},System.Action{StaticDotNet.ParameterValidation.ParameterValidator{`0}},System.Action{StaticDotNet.ParameterValidation.ParameterValidator{`0}})">
+            <summary>
+            Adds additional validation based on the <paramref name="conditionExpression" /> returning true or false.
+            </summary>
+            <param name="conditionExpression">The expression to evaluate.</param>
+            <param name="trueExpression">The validation to run if the <paramref name="conditionExpression" /> returns true.</param>
+            <param name="falseExpression">The validation to run if the <paramref name="conditionExpression" /> returns false.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.When(System.Boolean,System.Action{StaticDotNet.ParameterValidation.ParameterValidator{`0}})">
+            <summary>
+            Adds additional validation based on the <paramref name="condition" /> returning true.
+            </summary>
+            <param name="condition">The condition.</param>
+            <param name="trueExpression">The validation to run if the <paramref name="condition" /> returns true.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.When(System.Boolean,System.Action{StaticDotNet.ParameterValidation.ParameterValidator{`0}},System.Action{StaticDotNet.ParameterValidation.ParameterValidator{`0}})">
+            <summary>
+            Adds additional validation based on the <paramref name="condition" /> returning true or false.
+            </summary>
+            <param name="condition">The condition.</param>
+            <param name="trueExpression">The validation to run if the <paramref name="condition" /> returns true.</param>
+            <param name="falseExpression">The validation to run if the <paramref name="condition" /> returns false.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.ThrowIf(System.Func{`0,System.Boolean},System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if the <paramref name="conditionExpression" /> evaluates to true.
+            </summary>
+            <param name="conditionExpression">The expression to evaluate.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">If the <paramref name="conditionExpression" /> evalutes to true.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.ParameterValidator`1.ThrowIf(System.Boolean,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if the <paramref name="condition" /> evaluates to true.
+            </summary>
+            <param name="condition">The condition.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">If the <paramref name="condition" /> evalutes to true.</exception>
+        </member>
+        <member name="T:StaticDotNet.ParameterValidation.StringExtensions">
+            <summary>
+            Adds parameter validation for <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.IsNotEmpty(StaticDotNet.ParameterValidation.ParameterValidator{System.String})">
+            <summary>
+            Validates that the parameter is not empty. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is empty.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.IsNotEmpty(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.String)">
+            <summary>
+            Validates that the parameter is not empty. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is empty.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.IsEmpty(StaticDotNet.ParameterValidation.ParameterValidator{System.String})">
+            <summary>
+            Validates that the parameter is empty. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is not empty.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.IsEmpty(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.String)">
+            <summary>
+            Validates that the parameter is empty. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is not empty.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.IsNotNullOrEmpty(StaticDotNet.ParameterValidation.ParameterValidator{System.String})">
+            <summary>
+            Validates that the parameter is not null or empty. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is null or empty.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.IsNotNullOrEmpty(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.String)">
+            <summary>
+            Validates that the parameter is not null or empty. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is null or empty.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.IsNotWhiteSpace(StaticDotNet.ParameterValidation.ParameterValidator{System.String})">
+            <summary>
+            Validates that the parameter is not empty or white space. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is empty or white space.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.IsNotWhiteSpace(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.String)">
+            <summary>
+            Validates that the parameter is not empty or white space. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is empty or white space.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.IsNotNullOrWhiteSpace(StaticDotNet.ParameterValidation.ParameterValidator{System.String})">
+            <summary>
+            Validates that the parameter is not null, empty or white space. Otherwise, an <see cref="T:System.ArgumentNullException" /> or <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the parameter is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is empty or white space.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.IsNotNullOrWhiteSpace(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.String)">
+            <summary>
+            Validates that the parameter is not null, empty or white space. Otherwise, an <see cref="T:System.ArgumentNullException" /> or <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the parameter is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is empty or white space.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.HasLength(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.Int32)">
+            <summary>
+            Validates that the parameter has the expected length. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="expectedLength">The expected length.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter length is not equal to <paramref name="expectedLength" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.HasLength(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.Int32,System.String)">
+            <summary>
+            Validates that the parameter has the expected length. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="expectedLength">The expected length.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter length is not equal to <paramref name="expectedLength" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.HasMaxLength(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.Int32)">
+            <summary>
+            Validates that the parameter is less than or equal to the <paramref name="maxLength"/>. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="maxLength">The maximum length.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter length is not less than or equal to the <paramref name="maxLength" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.HasMaxLength(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.Int32,System.String)">
+            <summary>
+            Validates that the parameter is less than or equal to the <paramref name="maxLength"/>. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="maxLength">The maximum length.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter length is not less than or equal to the <paramref name="maxLength" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.HasMinLength(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.Int32)">
+            <summary>
+            Validates that the parameter is greater than or equal to the <paramref name="minLength"/>. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="minLength">The minimum length.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter length is not greater than or equal to the <paramref name="minLength" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.HasMinLength(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.Int32,System.String)">
+            <summary>
+            Validates that the parameter is greater than or equal to the <paramref name="minLength"/>. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="minLength">The minimum length.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter length is not greater than or equal to the <paramref name="minLength" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.HasLengthBetween(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.Int32,System.Int32)">
+            <summary>
+            Validates that the parameter is greater than or equal to the <paramref name="minLength"/> and less than or equal to <paramref name="maxLength" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="minLength">The minimum length.</param>
+            <param name="maxLength">The maximum length.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter length is not greater than or equal to the <paramref name="minLength" /> and less than or equal to <paramref name="maxLength"/>.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.HasLengthBetween(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.Int32,System.Int32,System.String)">
+            <summary>
+            Validates that the parameter is greater than or equal to the <paramref name="minLength"/> and less than or equal to <paramref name="maxLength" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="minLength">The minimum length.</param>
+            <param name="maxLength">The maximum length.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter length is not greater than or equal to the <paramref name="minLength" /> and less than or equal to <paramref name="maxLength"/>.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.Contains(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.String)">
+            <summary>
+            Validates that the parameter contains the specific <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must contain.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter value does not contain <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.Contains(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.String,System.String)">
+            <summary>
+            Validates that the parameter contains the specific <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must contain.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter value does not contain <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.StartsWith(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.String)">
+            <summary>
+            Validates that the parameter must start with the specified <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must start with.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter value does not start with <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.StartsWith(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.String,System.String)">
+            <summary>
+            Validates that the parameter must start with the specified <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must start with.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter value does not start with <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.EndsWith(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.String)">
+            <summary>
+            Validates that the parameter must end with the specified <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must end with.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter value does not end with <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.EndsWith(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.String,System.String)">
+            <summary>
+            Validates that the parameter must end with the specified <paramref name="value" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="value">The value the parameter must end with.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter value does not end with <paramref name="value" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.Match(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.String)">
+            <summary>
+            Validates that the parameter matches the specified regular expression <paramref name="pattern" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="pattern">The regular expression pattern.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter does not match <paramref name="pattern" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.Match(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.String,System.Text.RegularExpressions.Match@)">
+            <summary>
+            Validates that the parameter matches the specified regular expression <paramref name="pattern" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="pattern">The regular expression pattern.</param>
+            <param name="match">The <see cref="T:System.Text.RegularExpressions.Match"/>.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter does not match <paramref name="pattern" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.Match(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.String,System.String)">
+            <summary>
+            Validates that the parameter matches the specified regular expression <paramref name="pattern" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="pattern">The regular expression pattern.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter does not match <paramref name="pattern" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.Match(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.String,System.String,System.Text.RegularExpressions.Match@)">
+            <summary>
+            Validates that the parameter matches the specified regular expression <paramref name="pattern" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="pattern">The regular expression pattern.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <param name="match">The <see cref="T:System.Text.RegularExpressions.Match"/>.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter does not match <paramref name="pattern" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.Match(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.Text.RegularExpressions.Regex)">
+            <summary>
+            Validates that the parameter matches the specified regular expression <paramref name="regex" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="regex">The regular expression.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter does not match <paramref name="regex" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.Match(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.Text.RegularExpressions.Regex,System.Text.RegularExpressions.Match@)">
+            <summary>
+            Validates that the parameter matches the specified regular expression <paramref name="regex" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="regex">The regular expression.</param>
+            <param name="match">The <see cref="T:System.Text.RegularExpressions.Match"/>.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter does not match <paramref name="regex" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.Match(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.Text.RegularExpressions.Regex,System.String)">
+            <summary>
+            Validates that the parameter matches the specified regular expression <paramref name="regex" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="regex">The regular expression.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter does not match <paramref name="regex" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.StringExtensions.Match(StaticDotNet.ParameterValidation.ParameterValidator{System.String},System.Text.RegularExpressions.Regex,System.String,System.Text.RegularExpressions.Match@)">
+            <summary>
+            Validates that the parameter matches the specified regular expression <paramref name="regex" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="regex">The regular expression.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <param name="match">The <see cref="T:System.Text.RegularExpressions.Match"/>.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter does not match <paramref name="regex" />.</exception>
+        </member>
+        <member name="T:StaticDotNet.ParameterValidation.TypeExtensions">
+            <summary>
+            Adds parameter validation for <see cref="T:System.Type"/>.
+            </summary>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.TypeExtensions.IsEqualTo``1(StaticDotNet.ParameterValidation.ParameterValidator{System.Type})">
+            <summary>
+             Validates that the parameter is equal to <typeparamref name="TType" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TType">The expected value.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is not equal to <typeparamref name="TType" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.TypeExtensions.IsEqualTo``1(StaticDotNet.ParameterValidation.ParameterValidator{System.Type},System.String)">
+            <summary>
+             Validates that the parameter is equal to <typeparamref name="TType" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TType">The expected value.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is not equal to <typeparamref name="TType" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.TypeExtensions.IsAssignableTo``1(StaticDotNet.ParameterValidation.ParameterValidator{System.Type})">
+            <summary>
+            Validates that the parameter is assignable to <typeparamref name="TType" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TType">The type the parameter should be assignable to.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is not assignable to <typeparamref name="TType" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.TypeExtensions.IsAssignableTo``1(StaticDotNet.ParameterValidation.ParameterValidator{System.Type},System.String)">
+            <summary>
+            Validates that the parameter is assignable to <typeparamref name="TType" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <typeparam name="TType">The type the parameter should be assignable to.</typeparam>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is not assignable to <typeparamref name="TType" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.TypeExtensions.IsAssignableTo(StaticDotNet.ParameterValidation.ParameterValidator{System.Type},System.Type)">
+            <summary>
+            Validates that the parameter is assignable to <paramref name="type" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="type">The type the parameter should be assignable to.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is not assignable to <paramref name="type" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.TypeExtensions.IsAssignableTo(StaticDotNet.ParameterValidation.ParameterValidator{System.Type},System.Type,System.String)">
+            <summary>
+            Validates that the parameter is assignable to <paramref name="type" />. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="type">The type the parameter should be assignable to.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is not assignable to <paramref name="type" />.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.TypeExtensions.IsClass(StaticDotNet.ParameterValidation.ParameterValidator{System.Type})">
+            <summary>
+            Validates that the parameter is a class. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is not a class.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.TypeExtensions.IsClass(StaticDotNet.ParameterValidation.ParameterValidator{System.Type},System.String)">
+            <summary>
+            Validates that the parameter is a class. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is not a class.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.TypeExtensions.IsInterface(StaticDotNet.ParameterValidation.ParameterValidator{System.Type})">
+            <summary>
+            Validates that the parameter is an interface. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is not an interface.</exception>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.TypeExtensions.IsInterface(StaticDotNet.ParameterValidation.ParameterValidator{System.Type},System.String)">
+            <summary>
+            Validates that the parameter is an interface. Otherwise, an <see cref="T:System.ArgumentException" /> is thrown.
+            </summary>
+            <param name="validator">The <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</param>
+            <param name="exceptionMessage">The exception message.</param>
+            <returns>The same instance of <see cref="T:StaticDotNet.ParameterValidation.ParameterValidator`1" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the parameter is not an interface.</exception>
+        </member>
+        <member name="T:StaticDotNet.ParameterValidation.Extensions.IEnumerableExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.Collections.IEnumerable" />.
+            </summary>
+        </member>
+        <member name="M:StaticDotNet.ParameterValidation.Extensions.IEnumerableExtensions.IsEmpty(System.Collections.IEnumerable)">
+            <summary>
+            Checks if an <see cref="T:System.Collections.IEnumerable" /> is empty.
+            </summary>
+            <param name="enumerable">The <see cref="T:System.Collections.IEnumerable" />.</param>
+            <returns>Whether or not the <see cref="T:System.Collections.IEnumerable"/> is empty.</returns>
+        </member>
+        <member name="T:StaticDotNet.ParameterValidation.Resources.ExceptionMessages">
+            <summary>
+               A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.ResourceManager">
+            <summary>
+               Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.Culture">
+            <summary>
+               Overrides the current thread's CurrentUICulture property for all
+               resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_CANNOT_BE_EMPTY">
+            <summary>
+               Looks up a localized string similar to Value cannot be empty..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_CANNOT_BE_EMPTY_OR_WHITE_SPACE">
+            <summary>
+               Looks up a localized string similar to Value cannot be empty or white space..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_CANNOT_BE_NULL">
+            <summary>
+               Looks up a localized string similar to Value cannot be null..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_CANNOT_BE_NULL_EMPTY_OR_WHITE_SPACE">
+            <summary>
+               Looks up a localized string similar to Value cannot be null, empty or white space..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_CANNOT_BE_NULL_OR_EMPTY">
+            <summary>
+               Looks up a localized string similar to Value cannot be null or empty..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_BE_A_CLASS">
+            <summary>
+               Looks up a localized string similar to Value must be a class..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_BE_AN_INTERFACE">
+            <summary>
+               Looks up a localized string similar to Value must be an interface..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_BE_ASSIGNABLE_TO">
+            <summary>
+               Looks up a localized string similar to Value must be assignable to &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_BE_BETWEEN">
+            <summary>
+               Looks up a localized string similar to Value must be between &apos;{0}&apos; and &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_BE_EMPTY">
+            <summary>
+               Looks up a localized string similar to Value must be empty..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_BE_EQUAL_TO">
+            <summary>
+               Looks up a localized string similar to Value must be equal to &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_BE_GREATER_THAN">
+            <summary>
+               Looks up a localized string similar to Value must be greater than &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_BE_GREATER_THAN_OR_EQUAL_TO">
+            <summary>
+               Looks up a localized string similar to Value must be greater than or equal to &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_BE_LESS_THAN">
+            <summary>
+               Looks up a localized string similar to Value must be less than &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_BE_LESS_THAN_OR_EQUAL_TO">
+            <summary>
+               Looks up a localized string similar to Value must be less than or equal to &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_BE_NULL">
+            <summary>
+               Looks up a localized string similar to Value must be null..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_BE_TYPE">
+            <summary>
+               Looks up a localized string similar to Value must be type &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_CONTAIN">
+            <summary>
+               Looks up a localized string similar to Value must contain &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_END_WITH">
+            <summary>
+               Looks up a localized string similar to Value must end with &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_HAVE_LENGTH_BETWEEN">
+            <summary>
+               Looks up a localized string similar to Value must have a length between {0} and {1}..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_HAVE_LENGTH_EQUAL_TO">
+            <summary>
+               Looks up a localized string similar to Value must have a length equal to {0}..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_HAVE_LENGTH_GREATER_THAN_OR_EQUAL_TO">
+            <summary>
+               Looks up a localized string similar to Value must have a length greater than or equal to {0}..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_HAVE_LENGTH_LESS_THAN_OR_EQUAL_TO">
+            <summary>
+               Looks up a localized string similar to Value must have a length less than or equal to {0}..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_MATCH_REGULAR_EXPRESSION">
+            <summary>
+               Looks up a localized string similar to Value must match the regular expression &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_NOT_BE_EQUAL_TO">
+            <summary>
+               Looks up a localized string similar to Value must not be equal to &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:StaticDotNet.ParameterValidation.Resources.ExceptionMessages.VALUE_MUST_START_WITH">
+            <summary>
+               Looks up a localized string similar to Value must start with &apos;{0}&apos;..
+            </summary>
+        </member>
+    </members>
+</doc>
