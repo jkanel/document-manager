@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\DocumentCollector.cs" />
+    <Compile Include="Controller\DocumentPublisher.cs" />
     <Compile Include="Model\Document.cs" />
     <Compile Include="Model\DocumentFile.cs" />
     <Compile Include="Data\AppContext.cs" />

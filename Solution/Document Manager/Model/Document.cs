@@ -13,13 +13,9 @@ namespace FileManager.Model
     [Table("Document")]
     public class Document : BaseEntity
     {
-
-        public static string TargetRootFolder = null;
-
         // constructors
         public Document() { }
 
-        [Index("IX_DocumentHash", IsUnique = true, Order = 1)]
         [Key, Required, MaxLength(200)]
         public string DocumentHash { get; set; }
 
@@ -44,42 +40,23 @@ namespace FileManager.Model
         [MaxLength(4000)]
         public string TargetFolderBranch { get; set; }
 
-        [NotMapped]
-        public string TargetFilePath
+        public static string BuildFilePath(string RootFolder, string Branch, string Scope, string Client, string Project)
         {
             
-            get {
-
-                if (this.TargetFolderBranch == null || TargetRootFolder == null)
-                {
-                    throw new MissingFieldException("Branch or target root folder is missing");
-                }
-
-
-                // dymanically generate the folder branch
-                string Branch = this.TargetFolderBranch.Replace("{client}", this.Client);
-
-                Branch = Branch.Replace("{scope}", this.Scope);
-                Branch = Branch.Replace("{project}", this.Project);
-                
-                return string.Join("\\", new string[] { TargetRootFolder, Branch, this.TargetFileName });
-            }
-        }        
-
-        public static string GenerateFileHash(string FilePath)
-        {
-            FileStream file = new FileStream(FilePath, FileMode.Open);
-            MD5 md5 = new MD5CryptoServiceProvider();
-            byte[] retVal = md5.ComputeHash(file);
-            file.Close();
-
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < retVal.Length; i++)
+            if (Branch == null || RootFolder == null)
             {
-                sb.Append(retVal[i].ToString("x2"));
+                throw new MissingFieldException("Branch or target root folder is missing");
             }
-            return sb.ToString();
-        }
+            string QualifiedBranch;
+
+            // dymanically generate the folder branch
+            QualifiedBranch = Branch.Replace("{client}", Client);
+            QualifiedBranch = QualifiedBranch.Replace("{scope}", Scope);
+            QualifiedBranch = QualifiedBranch.Replace("{project}", Project);
+                
+            return string.Join("\\", new string[] { RootFolder, QualifiedBranch });
+
+        }        
 
         [Required]
         public Byte IgnoreFlag { get; set; } = FALSE_FLAG_VALUE;
@@ -97,6 +74,20 @@ namespace FileManager.Model
             }
         }
 
+        public static string GenerateFileHash(string FilePath)
+        {
+            FileStream file = new FileStream(FilePath, FileMode.Open);
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] retVal = md5.ComputeHash(file);
+            file.Close();
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < retVal.Length; i++)
+            {
+                sb.Append(retVal[i].ToString("x2"));
+            }
+            return sb.ToString();
+        }
 
         public virtual ICollection<DocumentFile> DocumentFiles { get; set; }
 

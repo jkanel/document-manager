@@ -32,7 +32,6 @@ namespace FileManager.Model
             this.PathDepth = FilePath.Count(x => x.Equals('\\')) - 1;
         }
 
-        [Index("IX_FilePath", IsUnique = true, Order = 1)]
         [Key, Required, MaxLength(4000)]
         public string FilePath { get; set; }
 
@@ -89,6 +88,24 @@ namespace FileManager.Model
         public static string GetFileTypeFromPath(string FilePath)
         {
             return Path.GetExtension(FilePath);
+        }
+
+        public static void AssertFolderExists(string FolderPath)
+        {
+            if(!Directory.Exists(FolderPath))
+            {
+                Directory.CreateDirectory(FolderPath);
+            }
+        }
+
+        public static void MoveFile(string OriginalFilePath, string NewFilePath)
+        {
+            File.Move(OriginalFilePath, NewFilePath);
+        }
+
+        public static void CopyFile(string OriginalFilePath, string NewFilePath)
+        {
+            File.Copy(OriginalFilePath, NewFilePath);
         }
 
     }

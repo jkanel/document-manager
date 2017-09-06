@@ -166,8 +166,9 @@ namespace FileManager.Controller
                 DocumentHashStore.Add(TempFile.DocumentHash);
 
             }
-            
-            // create the TempFile if it does not exist
+
+
+            //create the TempFile if it does not exist
             if (!FileInfoStore.Any(fi => fi.FilePath.Equals(FilePath)))
             {
                 AppContext.DocumentFiles.Add(TempFile);
@@ -176,11 +177,11 @@ namespace FileManager.Controller
                 // add the new file info to the store
                 FileInfoStore.Add(new DocumentFileInfo() { FilePath = FilePath, DocumentHash = TempFile.DocumentHash });
             }
-            
-            else 
+
+            else
             {
                 // get the relevant file info
-                DocumentFileInfo FileInfo  = FileInfoStore.Where(fi => fi.FilePath.Equals(FilePath)).SingleOrDefault();
+                DocumentFileInfo FileInfo = FileInfoStore.Where(fi => fi.FilePath.Equals(FilePath)).SingleOrDefault();
 
                 // update the document hash if it has changed
                 if (!FileInfo.DocumentHash.Equals(TempFile.DocumentHash))
@@ -195,7 +196,7 @@ namespace FileManager.Controller
                     // update store to reflect the new document hash
                     FileInfo.DocumentHash = TempFile.DocumentHash;
                 }
-                
+
             }
 
         }

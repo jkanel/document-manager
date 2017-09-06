@@ -15,14 +15,20 @@ namespace FileManager
             string ConnectionString = @"Server=localhost;Database=DocumentManager;Trusted_Connection=True;";
             ApplicationContext AppContext = new ApplicationContext(ConnectionString);
 
-            string RootFolderPath = @"C:\Users\jeff.kanel\Temporary\Data and Analytics Repository";
+            //string RootFolderPath = @"C:\Users\jeff.kanel\Temporary\Data and Analytics Repository";
 
-            new DocumentCollector(AppContext).CollectDocuments(RootFolderPath, true);
+            //new DocumentCollector(AppContext).CollectDocuments(RootFolderPath, true);
+            //Console.Write("Document collection completed.");
+            //Console.Out.Flush();
+            //string wait = Console.ReadLine();
 
-            Console.Write("Document collection completed.");
+            string TargetRootFolder = @"C:\Temporary";
+            new DocumentPublisher(AppContext, TargetRootFolder).Publish(@"Delivery\Clients");
+
+            Console.Write("Document publish completed.");
             Console.Out.Flush();
             string wait = Console.ReadLine();
         }
-        
+
     }
 }
