@@ -102,6 +102,7 @@
     <Compile Include="Model\Document.cs" />
     <Compile Include="Model\DocumentFile.cs" />
     <Compile Include="Data\AppContext.cs" />
+    <Compile Include="Model\DocumentWord.cs" />
     <Compile Include="Model\_BaseEntity.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,6 +110,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\dbo.DocumentRefresh.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -40,6 +40,19 @@ namespace FileManager.Model
         [MaxLength(4000)]
         public string TargetFolderBranch { get; set; }
 
+        [Required]
+        public long FileSize { get; set; }
+
+        [MaxLength(200)]
+        public string FileType { get; set; }
+
+        [Required]
+        public DateTime FileCreatedTimestamp { get; set; }
+
+        [Required]
+        public DateTime FileModifiedTimestamp { get; set; }
+
+
         public static string BuildFilePath(string RootFolder, string Branch, string Scope, string Client, string Project)
         {
             
@@ -47,6 +60,7 @@ namespace FileManager.Model
             {
                 throw new MissingFieldException("Branch or target root folder is missing");
             }
+
             string QualifiedBranch;
 
             // dymanically generate the folder branch
@@ -76,20 +90,27 @@ namespace FileManager.Model
 
         public static string GenerateFileHash(string FilePath)
         {
-            FileStream file = new FileStream(FilePath, FileMode.Open);
-            MD5 md5 = new MD5CryptoServiceProvider();
-            byte[] retVal = md5.ComputeHash(file);
-            file.Close();
+            try
+            { 
+                FileStream file = new FileStream(FilePath, FileMode.Open, FileAccess.Read);
+                MD5 md5 = new MD5CryptoServiceProvider();
+                byte[] retVal = md5.ComputeHash(file);
+                file.Close();
 
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < retVal.Length; i++)
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < retVal.Length; i++)
+                {
+                    sb.Append(retVal[i].ToString("x2"));
+                }
+                return sb.ToString();
+
+            } catch (Exception e)
             {
-                sb.Append(retVal[i].ToString("x2"));
+                Console.WriteLine("Generate hash error encountered for \"{0}\". {1}", FilePath, e.Message);
+                return "ERROR";
             }
-            return sb.ToString();
         }
 
-        public virtual ICollection<DocumentFile> DocumentFiles { get; set; }
-
+        
     }
 }

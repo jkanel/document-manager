@@ -32,44 +32,34 @@ namespace FileManager.Controller
         /// <summary>
         /// Pulishes all relevant documents matching the target folder branch
         /// </summary>
-        /// <param name="FilterTargetFolderBranch">Filter of the target branch applied to documents that are published.</param>
-        public void Publish(string FilterTargetFolderBranch)
+        /// <param name="TargetFolderBranch">Filter of the target branch applied to documents that are published.</param>
+        public void Publish(string FilterFolderBranch)
         {
+
+            if (FilterFolderBranch == null) FilterFolderBranch = "";
+
             // build the target root folder
-            string TargetRootFolderPath = BuildPath(this.TargetRootFolder, FilterTargetFolderBranch);
-            DocumentFile.AssertFolderExists(TargetRootFolderPath);
+            string FilterFolderPath = BuildPath(this.TargetRootFolder, FilterFolderBranch);
+            DocumentFile.AssertFolderExists(FilterFolderPath);
 
             // get file info under the target root
-            this.FileInfoStore = GetFileInfoStoreFromPath(TargetRootFolderPath, true);
-
-            if (FilterTargetFolderBranch == null) FilterTargetFolderBranch = "";
+            this.FileInfoStore = GetFileInfoStoreFromPath(FilterFolderPath, true);
 
             // get target folders to publish
-            var TargetFolderDetails = AppContext.Documents
-                .Where(d =>
-                    d.IgnoreFlag == Document.FALSE_FLAG_VALUE
-                    && d.TargetFolderBranch.StartsWith(FilterTargetFolderBranch))
-                .Select(d => new
-                {
-                    TargetFolderBranch = d.TargetFolderBranch,
-                    Scope = d.Scope,
-                    Client = d.Client,
-                    Project = d.Project
-                }).Distinct().ToList();
+            string[] TargetFolderBranches = AppContext.Documents
+                .Where(d => d.IgnoreFlag == Document.FALSE_FLAG_VALUE
+                    && d.TargetFolderBranch.StartsWith(FilterFolderBranch))
+                .Select(b => b.TargetFolderBranch)
+                .Distinct()
+                .ToArray<string>();
 
+            string TargetFolderPath = null;
 
             // loop through folders
-            foreach(var TargetFolderDetail in TargetFolderDetails)
+            foreach(string TargetFolderBranch in TargetFolderBranches)
             {
-                // generate target path
-                string TargetFolderPath = Document.BuildFilePath(
-                    this.TargetRootFolder,
-                    TargetFolderDetail.TargetFolderBranch,
-                    TargetFolderDetail.Scope,
-                    TargetFolderDetail.Client,
-                    TargetFolderDetail.Project);
-
-                PublishFolder(TargetFolderPath, TargetFolderDetail.TargetFolderBranch);
+                TargetFolderPath = BuildPath(this.TargetRootFolder, TargetFolderBranch);
+                PublishFolder(TargetFolderPath, TargetFolderBranch);
             }
         }
 
@@ -85,17 +75,17 @@ namespace FileManager.Controller
             }
         }
 
-        private static List<DocumentFileInfo> GetFileInfoStoreFromPath(string RootFolderPath, bool Recursive)
+        private static List<DocumentFileInfo> GetFileInfoStoreFromPath(string FolderPath, bool Recursive)
         {
             string[] FilePaths;
 
             if (Recursive)
             {
-                FilePaths = Directory.GetFiles(RootFolderPath, "*", SearchOption.AllDirectories);
+                FilePaths = Directory.GetFiles(FolderPath, "*", SearchOption.AllDirectories);
             }
             else
             {
-                FilePaths = Directory.GetFiles(RootFolderPath, "*", SearchOption.TopDirectoryOnly);
+                FilePaths = Directory.GetFiles(FolderPath, "*", SearchOption.TopDirectoryOnly);
             }
 
             Console.WriteLine("Creating stores at {0}.", DateTime.Now.ToString("s"));
@@ -124,21 +114,6 @@ namespace FileManager.Controller
 
         public void PublishFolder(string TargetFolderPath, string TargetFolderBranch)
         {
-
-            // create the target folder if it does not exist
-            //DocumentFile.AssertFolderExists(TargetFolderPath);
-            //AppContext.Database.SqlQuery<>
-            //// get all documents in the target folder branch
-            //var DocumentDetailList = AppContext.DocumentFiles
-            //    .Where(d => d.DeletedFlag.Equals(DocumentFile.FALSE_FLAG_VALUE)
-            //        && d.Document.IgnoreFlag.Equals(Document.FALSE_FLAG_VALUE)
-            //        && d.Document.TargetFolderBranch.Equals(TargetFolderBranch))
-            //    .FirstOrDefault(x => x.DocumentHash)
-            //    .Select(y => y.OrderBy(a => a.FilePath))
-            //    .Select(z => new {
-            //        SourceFilePath = z.FilePath,
-            //        DocumentHash = z.DocumentHash,
-            //        TargetFileName = z.Document.TargetFileName }).ToList();
 
             string Query = @"SELECT
                   d.DocumentHash
@@ -197,8 +172,11 @@ namespace FileManager.Controller
             if (dfi != null)
             {
                 // if target path is different
+                // otherwise no action is required: file name and hash are identical
                 if (!dfi.FilePath.Equals(TargetFilePath))
                 {
+                    Console.WriteLine("Moving file to \"{0}\".", TargetFilePath);
+
                     // move the file and rename it
                     DocumentFile.MoveFile(dfi.FilePath, TargetFilePath);
                 }
@@ -207,6 +185,8 @@ namespace FileManager.Controller
             {
                 try
                 {
+                    Console.WriteLine("Copying file to \"{0}\".", TargetFilePath);
+
                     // otherwise copy file from source (outside root folder)
                     DocumentFile.CopyFile(SourceFilePath, TargetFilePath);
                 }

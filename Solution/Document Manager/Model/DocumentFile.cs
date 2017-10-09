@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.IO;
+using System.Text.RegularExpressions;
+
 namespace FileManager.Model
 {
     [Table("DocumentFile")]
@@ -17,18 +19,28 @@ namespace FileManager.Model
 
         public DocumentFile(string FilePath)
         {
+            this.DocumentHash = Document.GenerateFileHash(FilePath);
+            this.UpdateFileInfo(FilePath);
+        }
+
+        public DocumentFile(string FilePath, string DocumentHash)
+        {
+            this.DocumentHash = DocumentHash;
             this.UpdateFileInfo(FilePath);
         }
 
         public void UpdateFileInfo(string FilePath)
         {
             this.FilePath = FilePath;
-            this.FileName = DocumentFile.GetFileNameFromPath(FilePath);
-            this.FolderPath = DocumentFile.GetFolderFromPath(FilePath);
-            this.FileType = DocumentFile.GetFileTypeFromPath(FilePath);
-            this.DocumentHash = Document.GenerateFileHash(FilePath);
-            this.FileModifiedTimestamp = File.GetLastWriteTime(FilePath);
-            this.FileCreatedTimestamp = File.GetCreationTime(FilePath);
+
+            FileInfo fi = new FileInfo(FilePath);
+            
+            this.FileName = fi.Name;
+            this.FolderPath = fi.DirectoryName;
+            this.FileType = fi.Extension;
+            this.FileModifiedTimestamp = fi.LastWriteTime;
+            this.FileCreatedTimestamp = fi.CreationTime;
+            this.FileSize = fi.Length;
             this.PathDepth = FilePath.Count(x => x.Equals('\\')) - 1;
         }
 
@@ -38,7 +50,7 @@ namespace FileManager.Model
         [Required, MaxLength(4000)]
         public string FolderPath { get; set; }
 
-        [Required, MaxLength(500)]
+        [Required, MaxLength(1000)]
         public string FileName { get; set; }
 
         [Required]
@@ -46,17 +58,17 @@ namespace FileManager.Model
         
         [Required]
         public DateTime FileModifiedTimestamp { get; set; }
+
+        [Required]
+        public long FileSize { get; set; }
+
         [Required]
         public int PathDepth { get; set; }
 
         [Required, MaxLength(500)]
         public string DocumentHash { get; set; }
         
-        [ForeignKey("DocumentHash")]
-        public virtual Document Document { get; set; }
-
-
-        [MaxLength(20)]
+        [MaxLength(200)]
         public string FileType { get; set; }
 
         [Required]
@@ -106,6 +118,17 @@ namespace FileManager.Model
         public static void CopyFile(string OriginalFilePath, string NewFilePath)
         {
             File.Copy(OriginalFilePath, NewFilePath);
+        }
+
+        public static string[] ExtractDocumentWords(string FolderPath, string FileName)
+        {
+            string[] pathwords = DocumentWord.ExtractPathWords(FolderPath);
+
+            string[] filewords = DocumentWord.ExtractIndividualWords(FileName);
+
+            string[] words = pathwords.Union(filewords).Distinct(StringComparer.OrdinalIgnoreCase).ToArray();
+
+            return words;
         }
 
     }

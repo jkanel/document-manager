@@ -32,8 +32,19 @@ namespace FileManager.Data
 
         }
 
+        public void RefreshDocuments()
+        {
+            this.Database.ExecuteSqlCommand("EXEC dbo.DocumentRefresh");
+        }
+
+        public void TruncateDocumentWords()
+        {
+            this.Database.ExecuteSqlCommand("TRUNCATE TABLE dbo.DocumentWord");
+        }
+
         public virtual DbSet<Document> Documents { get; set; }
         public virtual DbSet<DocumentFile> DocumentFiles { get; set; }
-       
+        public virtual DbSet<DocumentWord> DocumentWords { get; set; }
+
     }
 }
