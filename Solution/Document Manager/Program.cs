@@ -38,7 +38,7 @@ namespace FileManager
 
 
             // prompt the console
-            Console.WriteLine("PRESS ANY KEY TO FINISH");
+            Console.Write("PRESS ANY KEY TO FINISH");
             Console.Out.Flush();
             string wait = Console.ReadLine();
 
