@@ -15,14 +15,16 @@ namespace FileManager
             string ConnectionString = @"Server=localhost;Database=DocumentManager;Trusted_Connection=True;";
             ApplicationContext AppContext = new ApplicationContext(ConnectionString);
 
+            EngageEntityFramework(AppContext);
+
             // collecting document information
             string[] RootFolderPaths = new string[] {
-                //@"E:\C1GD",
-                //@"E:\C1GD2",
-                //@"E:\CGD",
-                //@"E:\CL1",
-                //@"E:\CL2",
-                @"C:\Users\jeff.kanel\Temporary\Data and Analytics Repository"
+                @"E:\C1GD",
+                @"E:\C1GD2",
+                @"E:\CGD",
+                @"E:\CL1",
+                @"E:\CL2"
+                //@"C:\Users\jeff.kanel\Temporary\Data and Analytics Repository"
             };
             Collect(RootFolderPaths, AppContext);
 
@@ -43,6 +45,17 @@ namespace FileManager
             string wait = Console.ReadLine();
 
         }
+
+        private static void EngageEntityFramework(ApplicationContext AppContext)
+        {
+            string[] list = AppContext.DocumentFiles
+                .Where(x => 1 == 0)
+                .Select(x => x.DocumentHash)
+                .ToArray<string>();
+
+            return;
+        }
+
         /// <summary>
         /// Collects and stores information about documents under the root folder paths.
         /// </summary>

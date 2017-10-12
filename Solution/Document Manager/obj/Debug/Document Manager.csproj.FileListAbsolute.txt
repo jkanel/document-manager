@@ -34,3 +34,5 @@ C:\Development\Solutions\GitHub\document-manager\Solution\Document Manager\bin\D
 C:\Development\Solutions\GitHub\document-manager\Solution\Document Manager\bin\Debug\System.Interactive.Async.xml
 C:\Development\Solutions\GitHub\document-manager\Solution\Document Manager\obj\Debug\FileManager.exe
 C:\Development\Solutions\GitHub\document-manager\Solution\Document Manager\obj\Debug\FileManager.pdb
+C:\Development\Solutions\GitHub\document-manager\Solution\Document Manager\obj\Debug\Document Manager.csprojResolveAssemblyReference.cache
+C:\Development\Solutions\GitHub\document-manager\Solution\Document Manager\obj\Debug\Document Manager.csproj.CoreCompileInputs.cache
